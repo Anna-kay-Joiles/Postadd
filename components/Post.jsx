@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
  
 const Post = () => {
   const [posts, setPosts] = useState([]);
-  const [edtitingId, setEditingId] = useState(null); // ID to track the ID of the post being edited
+  const [editingId, setEditingId] = useState(null); // ID to track the ID of the post being edited
   const [editingTitle, setEditingTitle] = useState(""); // To store the Title or Post being editied
   const [error, setError] = useState(""); // To store the error message
  
@@ -93,7 +93,7 @@ const Post = () => {
             key={post.id}
             className="border p-2 my-2 flex justify-between items-center"
           >
-            {edtitingId === post.id ? ( // Check if the post is being edited, if yest display in Edit mode, else display in normal mode
+            {editingId === post.id ? ( // Check if the post is being edited, if yest display in Edit mode, else display in normal mode
                 <div className="flex items-center">
                     <input
                     className="border p-2 mr-2"
